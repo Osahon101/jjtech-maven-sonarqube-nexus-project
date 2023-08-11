@@ -5,6 +5,7 @@
 - install git by running sudo <apt install git -y>
 - clone prometheus repo from within server git clone https://github.com/anselmenumbisia/maven-sonarqube-nexus-project.git
 <<<<<<< HEAD
+<<<<<<< HEAD
 - cd /home/ubuntu/maven-sonarqube-nexus-project/prometheus/
 - install prometheus by running <sh install-prometheus.sh>
 - check that prometheus service is running <sudo systemctl status prometheus.service>
@@ -12,6 +13,15 @@
 - ssh into app server 
 - Install git and clone the github repo with source code
 - install node exporter <sh install-node-exporter>
+=======
+- cd /home/ubuntu/maven-sonarqube-nexus-project/prometheus
+- install prometheus by running < sh install-prometheus.sh >
+- check that prometheus service is running < sudo systemctl status prometheus.service>
+
+- ssh into app server 
+- Instal git and clone the github repo with source code
+- install node exporter <sh install-node-exporter.sh>
+>>>>>>> 1b319eb7bfcfddb59bb2157e3942cb8d15de4f33
 =======
 - cd /home/ubuntu/maven-sonarqube-nexus-project/prometheus
 - install prometheus by running < sh install-prometheus.sh >
