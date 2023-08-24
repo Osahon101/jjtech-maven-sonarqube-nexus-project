@@ -27,15 +27,11 @@ pipeline {
                     def sonarLogin = credentials('SONAR_LOGIN')
                     
                     if (mvnHome) {
-                        sh "${mvnHome}/bin/mvn -f ${pomFile} sonar:sonar \
-                            -Dsonar.projectKey=${sonarKey} \
-                            -Dsonar.host.url=${sonarHostUrl} \
-                            -Dsonar.login=${sonarLogin}"
+                        sh script: "${mvnHome}/bin/mvn -f ${pomFile} sonar:sonar -Dsonar.projectKey=${sonarKey} -Dsonar.host.url=${sonarHostUrl} -Dsonar.login=${sonarLogin}", 
+                           returnStatus: true
                     } else {
-                        sh "mvn -f ${pomFile} sonar:sonar \
-                            -Dsonar.projectKey=${sonarKey} \
-                            -Dsonar.host.url=${sonarHostUrl} \
-                            -Dsonar.login=${sonarLogin}"
+                        sh script: "mvn -f ${pomFile} sonar:sonar -Dsonar.projectKey=${sonarKey} -Dsonar.host.url=${sonarHostUrl} -Dsonar.login=${sonarLogin}", 
+                           returnStatus: true
                     }
                 }
             }
