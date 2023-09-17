@@ -108,6 +108,7 @@ server{
         proxy_set_header    X-Forwarded-Proto http;
     }
 }
+
 EOT
 ln -s /etc/nginx/sites-available/sonarqube /etc/nginx/sites-enabled/sonarqube
 systemctl enable nginx.service

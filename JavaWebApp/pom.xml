@@ -3,11 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
-
   <groupId>com.example.maven-project</groupId>
   <artifactId>maven-project</artifactId>
   <packaging>pom</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>2.0-SNAPSHOT</version>
   <name>Maven Projects</name>
   <description>Sample Maven project with a working, deployable site.</description>
   <url>http://www.example.com</url>
@@ -25,11 +24,11 @@
   <distributionManagement>
  <snapshotRepository>
       <id>nexusdeploymentrepo</id>
-      <url>http://172.31.88.170:8081/repository/maven-snapshots/</url> <!-- Update the IP/Address to Your Nexus VM IP -->
-    </snapshotRepository>											  <!-- Mmake sure to create the "maven-snapshots" repo in Nexus -->
+      <url>http://172.31.9.23:8081/repository/maven-snapshots/</url> <!-- Update the IP/Address to Your Nexus VM IP -->
+    </snapshotRepository>											  <!-- Make sure to create the "maven-snapshots" repo in Nexus -->
 	<repository>
 	  <id>nexusdeploymentrepo</id>
-      <url>http://172.31.88.170:8081/repository/maven-releases/</url> <!-- Update the IP/Address to Your Nexus VM IP -->
+      <url>http://172.31.9.23:8081/repository/maven-releases/</url> <!-- Update the IP/Address to Your Nexus VM IP -->
     </repository>
   </distributionManagement>
 

@@ -4,6 +4,14 @@
 - ssh into prometheus server 
 - install git by running sudo <apt install git -y>
 - clone prometheus repo from within server git clone https://github.com/anselmenumbisia/maven-sonarqube-nexus-project.git
+- cd /home/ubuntu/maven-sonarqube-nexus-project/prometheus/
+- install prometheus by running <sh install-prometheus.sh>
+- check that prometheus service is running <sudo systemctl status prometheus.service>
+
+- ssh into app server 
+- Install git and clone the github repo with source code
+- install node exporter <sh install-node-exporter>
+=======
 - cd /home/ubuntu/maven-sonarqube-nexus-project/prometheus
 - install prometheus by running < sh install-prometheus.sh >
 - check that prometheus service is running < sudo systemctl status prometheus.service>
@@ -11,6 +19,7 @@
 - ssh into app server 
 - Instal git and clone the github repo with source code
 - install node exporter <sh install-node-exporter.sh>
+   
 
 - navigate to prometheus server\
 - cd /etc/prometheus/
@@ -46,12 +55,13 @@
 - edit inbound sg to allow traffic on port 9093
 - install alertmanager < sh install-alertmanager.sh >
 - access alertmanager on the browser using < public_ip:9093 >
-- update alertmanager file in /etc/alertmanager/ with your own configuration for email sender and recipient by runnig < sudo nano /etc/alertmanager/alertmanager.yml >
 - Navigate to < https://myaccount.google.com/ > 
 - https://myaccount.google.com/
+- configure 2 step verification for your google account? 
 - search for < app password >
 - Create an app password and paste the password to  ** auth_password ** section in your alertmanager file
-- restart the alermanager service < sudo systemctl restart alertmanager>
+- update alertmanager file in /etc/alertmanager/ with your own configuration for email sender and   recipient by running < sudo nano /etc/alertmanager/alertmanager.yml >
+- restart the alermanager service < sudo systemctl restart alertmanager >
 
 
 ## Test alert rules
