@@ -89,11 +89,11 @@ pipeline {
             }
 
             }
-        //   stage('approval') {
-        //     steps {
-        //         input "Please review the test and click 'Proceed' to apply it"
-        //     }
-        // }
+          stage('approval') {
+            steps {
+                input "Please review the test and click 'Proceed' to apply it"
+            }
+        }
 
         stage('build') {
             steps {
