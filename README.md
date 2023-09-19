@@ -50,7 +50,7 @@ Publishing artifact to Nexus snapshot and release repo using maven.
 1. Create a snapshot repo using nexus, or use default coming in out of the box. DEFAULT 
 2. Create a release repo using nexus, or use default coming out of the box. DEFAULT
 3. Create a group repo having both release, snapshot and other third party repos. or use default coming out of the box.
-4. Navigate to vsCode and in the settings.xml file,
+4. Navigate to vsCode and in the settings.cml file,
 - check to ensure your username and paswword for nexus is admin:admin on line 32 & 33.
 - update nexus repository urls with the current IP of nexus server on line 63 and 74 of settings.xml
 - update url for sonarqube on line 86  in the settings.xml file.
